@@ -6,6 +6,7 @@ on:
       # This syntax is globs, not regex, so it's matching any tag that
       # contains the prefix "mosh-" and the 3 version elements.
       - "mosh-*.*.*"
+      - "fish-wcwidth"
 
 jobs:
   macports-cache:
@@ -45,7 +46,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-22.04, macos-12]
+        os: [ubuntu-24.04, macos-12]
 
     steps:
     - uses: actions/checkout@v2
